@@ -1,29 +1,14 @@
 import React from 'react'
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-} from "react-router-dom";
 
-import { AuthProvider } from '../contexts/auth-context';
+import {AuthProvider} from '../contexts/auth-context';
 
-import AboutPage from './about';
-import HomePage from './index';
+import {Routes} from './_routes';
 
 const App = () => {
   return (
     <>
     <AuthProvider>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/about">
-            <AboutPage />
-          </Route>
-          <Route path="/">
-            <HomePage />
-          </Route>
-        </Switch>
-      </BrowserRouter>
+      <Routes />
     </AuthProvider>
     </>
   )

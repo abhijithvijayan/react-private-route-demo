@@ -1,14 +1,11 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom';
 
 import {Card} from '../components/Card';
+import { useAuth } from '../contexts/auth-context';
 
 const HomePage = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  function handleClick() {
-    setIsAuthenticated(!isAuthenticated);
-  }
+  const [isAuthenticated] = useAuth();
 
   return (
     <div>
@@ -23,8 +20,6 @@ const HomePage = () => {
       </>
 
       <br />
-      <button onClick={handleClick}>{isAuthenticated ? 'Login' : 'Logout'}</button>
-
 
       <Card isAuthenticated={isAuthenticated} />
     </div>

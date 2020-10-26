@@ -19,7 +19,7 @@ const AuthProvider:React.FC = ({children}) => {
 
   return (
     <AuthStateContext.Provider value={[isAuthenticated, setIsAuthenticated]}>
-        {children}
+      {children}
     </AuthStateContext.Provider>
   )
 }
