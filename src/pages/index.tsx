@@ -9,7 +9,7 @@ const HomePage = () => {
 
   return (
     <div>
-      Home Page
+      Home
       <Link to="/about">
         About
       </Link>
