@@ -22,7 +22,7 @@ export const Routes = () => {
               return <AboutPage />
             }
 
-            return null;
+            return <p>Not Authenticated</p>
           }} />
 
           <Route path="/">
