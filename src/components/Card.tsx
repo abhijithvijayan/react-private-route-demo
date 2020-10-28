@@ -15,8 +15,7 @@ export const CardItem: React.FC<CardItemProps> = ({isAuthenticated}) => {
 
   return (
     <div>
-      Card Item {isAuthenticated ? 'True': 'False'}
-      <button onClick={handleClick}>{isAuthenticated ? 'Login' : 'Logout'}</button>
+      <button onClick={handleClick}>{!isAuthenticated ? 'Login' : 'Logout'}</button>
     </div>
   )
 }
