@@ -16,6 +16,7 @@ const HomePage = () => {
 
       <br />
       <>
+        State:
         {JSON.stringify(isAuthenticated, null, 2)}
       </>
 
